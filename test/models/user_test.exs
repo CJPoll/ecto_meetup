@@ -14,42 +14,50 @@ defmodule EctoMeetup.User.Test do
   end
 
   describe "registration_changeset/2" do
+    @tag :skip
     test "exists" do
       User.registration_changeset(%User{}, %{})
     end
 
+    @tag :skip
     test "returns a changeset" do
       %Ecto.Changeset{} = User.registration_changeset(%User{}, %{})
     end
 
+    @tag :skip
     test "valid valid_registration_params are valid", %{valid_registration_params: params} do
       changeset = User.registration_changeset(%User{}, params)
       assert changeset.valid?
     end
 
+    @tag :skip
     test "requires the email field", %{valid_registration_params: params} do
       params = Map.delete(params, :email)
       changeset = User.registration_changeset(%User{}, params)
       refute changeset.valid?
     end
 
+    @tag :skip
     test "requires the password field", %{valid_registration_params: params} do
       params = Map.delete(params, :password)
       changeset = User.registration_changeset(%User{}, params)
       refute changeset.valid?
     end
 
+    @tag :skip
     test "requires the password_confirm field", %{valid_registration_params: params} do
       params = Map.delete(params, :password_confirm)
       changeset = User.registration_changeset(%User{}, params)
       refute changeset.valid?
     end
 
+    @tag :skip
     test "requires password and password_confirm to match", %{valid_registration_params: params} do
       changeset = User.registration_changeset(%User{}, %{params | password: "abc"})
       refute changeset.valid?
     end
 
+    @tag :skip
     test "alerts that the password does not match", %{valid_registration_params: params} do
       changeset = User.registration_changeset(%User{}, %{params | password: "abc"})
       errors = changeset.errors
