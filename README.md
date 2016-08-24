@@ -1,24 +1,11 @@
 # EctoMeetup
 
-**TODO: Add description**
+A small repo for learning how to use Ecto
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add `ecto_meetup` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:ecto_meetup, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `ecto_meetup` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:ecto_meetup]]
-    end
-    ```
-
+  1. Have elixir installed
+  1. `git clone https://github.com/cjpoll/ecto_meetup`
+  1. `mix deps.get`
+  1. `mix compile`
+  1. Some setup is necessary to get Ecto integrated into your app
