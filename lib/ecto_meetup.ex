@@ -1,0 +1,2 @@
+defmodule EctoMeetup do
+end
