@@ -7,7 +7,8 @@ defmodule EctoMeetup.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     aliases: aliases()]
   end
 
   def application do
@@ -19,5 +20,9 @@ defmodule EctoMeetup.Mixfile do
     [{:ecto, "2.0.4"},
      {:comeonin, "2.3.0"},
      {:postgrex, ">= 0.0.0"}]
+  end
+
+  defp aliases do
+    ["test": "test --exclude skip"]
   end
 end
