@@ -11,11 +11,13 @@ defmodule EctoMeetup.Mixfile do
   end
 
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :postgrex, :ecto],
+     mod: {EctoMeetup, []}]
   end
 
   defp deps do
     [{:ecto, "2.0.4"},
-     {:comeonin, "2.3.0"}]
+     {:comeonin, "2.3.0"},
+     {:postgrex, ">= 0.0.0"}]
   end
 end
